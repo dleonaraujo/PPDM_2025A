@@ -21,4 +21,14 @@ fun main (){
 
     println("Usted eligió: $opcionJugador")
     println("La computadora eligió: $opcionBot")
+
+    val resultado = when {
+        opcionJugador == opcionComputadora -> "Empate!"
+        (opcionJugador == "piedra" && opcionBot == "tijera") ||
+        (opcionJugador == "papel" && opcionBot == "piedra") ||
+        (opcionJugador == "tijera" && opcionBot == "papel") -> "Victory!"
+        else -> "GAME OVER"
+    }
+
+    println(resultado)
 }
