@@ -1,7 +1,14 @@
 package ejercicio1
 
 fun main () {
+    println("!Bienvenido!")
+    println("Ingrese los siguientes datos")
 
+    var puntuacion: Int = readPuntacion()
+    var salario: Double = readSalario()
+
+    print("Nivel de rendimiento: ${determinarRendimiento(puntuacion)}")
+    println("Cantidad de dinero recibido: ${salario*(puntuacion.toDouble()/10)}")
 }
 
 fun readPuntacion(): Int {
@@ -38,4 +45,14 @@ fun readSalario(): Double {
             println("!El valor ingresado, no es correcto!\n")
         }
     }
+}
+
+fun determinarRendimiento(puntuacion: Int): String{
+    var nivel: String = when(puntuacion){
+        in 0..3 -> "Inaceptable"
+        in 4..6 -> "Aceptable"
+        in 7..10-> "Meritorio"
+        else -> "Error no identificado"
+    }
+    return nivel
 }
