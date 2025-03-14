@@ -21,3 +21,21 @@ fun readPuntacion(): Int {
         }
     }
 }
+
+fun readSalario(): Double {
+    while(true) {
+        print("Salario: ")
+        var salario: Double? = readLine()?.toDoubleOrNull()
+        if (salario != null) {
+            if (salario >= 0.0) {
+                return salario
+            }
+            else {
+                println("!No puede tener un salario negativo!\n")
+            }
+        }
+        else {
+            println("!El valor ingresado, no es correcto!\n")
+        }
+    }
+}
