@@ -1,7 +1,10 @@
+import kotlin.random.Random
+
 fun main (){
     //Integrando la cantidad de vidas
     var vidas: Int = $
-    // Leyendo numero del 1 al 30
+    // Generando Numero aleatorio
+    val NumeroAleatorio = Random.nextInt(1,31)
     val numero: Int = readNumero()
 }
 
@@ -11,8 +14,8 @@ fun readNumero(): Int {
         var numero: Int? = readLine()?.toIntOrNull()  // Leer entrada y convertir a Int
 
         if (numero != null) {
-            if (numero in 1..30) {  // Validamos que esté en el rango de opciones válidas
-                return numero  // Retornamos la elección válida
+            if (numero in 1..30) {
+                return numero
             } else {
                 println("¡Su numero está fuera del rango!\n")  // Mensaje de error si el número no está en el rango
             }
