@@ -1,12 +1,19 @@
 fun main(){
     val opciones = listOf("suma","resta","multiplicacion","division","salir")
-    println("====Elija su opcion====")
+    while (true) {
+        println("====Elija su opcion====")
 
-    opciones.forEachIndexed{index,option ->
-        println("${index+1}. $option")
+        opciones.forEachIndexed { index, option ->
+            println("${index + 1}. $option")
+        }
+
+        val eleccion = readEleccion()
+        if (eleccion == 5) {
+            print("\nAdios!")
+            break
+        }
     }
 
-    val eleccion = readEleccion()
 }
 
 // Función para leer la puntuación del usuario asegurando que esté en el rango de 0 a 10
@@ -27,3 +34,11 @@ fun readEleccion(): Int {
     }
 }
 
+fun calculadora(eleccion: Int, a: Double,b: Double) {
+    val resultado = when {
+        1 -> a + b
+        2 -> a - b
+        3 -> a * b
+        4 -> 
+    }
+}
