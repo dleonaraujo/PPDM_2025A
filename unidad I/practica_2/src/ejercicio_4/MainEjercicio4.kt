@@ -69,6 +69,26 @@ class Biblioteca : IBiblioteca {
         }
     }
 
+    override fun prestarMaterial(usuario: Usuario, material: Material) {
+        if (materialesDisponibles.contains(material)) {
+            usuarios[usuario]?.add(material)
+            materialesDisponibles.remove(material)
+            println("Préstamo exitoso: ${usuario.nombre} ha tomado '${material.titulo}'")
+        } else {
+            println("Material no disponible para préstamo.")
+        }
+    }
+
+    override fun devolverMaterial(usuario: Usuario, material: Material) {
+        if (usuarios[usuario]?.contains(material) == true) {
+            usuarios[usuario]?.remove(material)
+            materialesDisponibles.add(material)
+            println("Devolución exitosa: '${material.titulo}' regresado por ${usuario.nombre}")
+        } else {
+            println("El usuario no tiene este material en préstamo.")
+        }
+    }
+
 
 }
 
