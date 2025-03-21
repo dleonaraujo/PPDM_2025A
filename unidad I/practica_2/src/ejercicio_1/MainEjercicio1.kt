@@ -17,5 +17,10 @@ class CuentaBancaria(private var saldo: Double, private var limiteRetiro: Double
         }
     }
 
+    // Getter para obtener el límite de retiro
+    fun getLimiteRetiro(): Double {
+        return limiteRetiro
+    }
+
 
 }
