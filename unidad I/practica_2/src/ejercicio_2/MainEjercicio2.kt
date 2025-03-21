@@ -35,3 +35,17 @@ class Producto(private var precio: Double, private var descuento: Double) {
         return precio - (precio * (descuento / 100))
     }
 }
+
+fun main() {
+    val producto = Producto(200.0, 10.0) // Precio inicial: 200, Descuento: 10%
+
+    println("Precio original: ${producto.getPrecio()} USD")
+    println("Descuento aplicado: ${producto.getDescuento()}%")
+    println("Precio final: ${producto.calcularPrecioFinal()} USD")
+
+    producto.setPrecio(300.0)  // Modificar el precio
+    producto.setDescuento(20.0)  // Modificar el descuento
+    println("\nPrecio actualizado: ${producto.getPrecio()} USD")
+    println("Descuento actualizado: ${producto.getDescuento()}%")
+    println("Nuevo precio final: ${producto.calcularPrecioFinal()} USD")
+}
