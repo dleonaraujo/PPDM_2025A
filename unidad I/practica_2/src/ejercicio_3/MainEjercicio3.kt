@@ -44,3 +44,17 @@ class Circulo(private val radio: Double) : Shape() {
         return 2 * PI * radio
     }
 }
+
+fun main() {
+    val cuadrado = Cuadrado(5.0)
+    println("Cuadrado:")
+    cuadrado.imprimirResultados()
+
+    val rectangulo = Rectangulo(4.0, 7.0)
+    println("Rectángulo:")
+    rectangulo.imprimirResultados()
+
+    val circulo = Circulo(3.0)
+    println("Círculo:")
+    circulo.imprimirResultados()
+}
