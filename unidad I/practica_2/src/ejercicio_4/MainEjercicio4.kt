@@ -89,6 +89,14 @@ class Biblioteca : IBiblioteca {
         }
     }
 
+    override fun mostrarMaterialesDisponibles() {
+        println("\nMateriales disponibles en la biblioteca:")
+        if (materialesDisponibles.isEmpty()) {
+            println("No hay materiales disponibles.")
+        } else {
+            materialesDisponibles.forEach { it.mostrarDetalles() }
+        }
+    }
 
 }
 
