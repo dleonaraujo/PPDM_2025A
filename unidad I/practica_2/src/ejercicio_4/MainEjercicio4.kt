@@ -33,6 +33,10 @@ class Revista(
 ) : Material(titulo, autor, anioPublicacion) {
 
     override fun mostrarDetalles() {
-        println("📰 Revista: $titulo | Autor: $autor | Año: $anioPublicacion | ISSN: $issn | Volumen: $volumen | Número: $numero | Editorial: $editorial")
+        println("Revista: $titulo | Autor: $autor | Año: $anioPublicacion | ISSN: $issn | Volumen: $volumen | Número: $numero | Editorial: $editorial")
     }
 }
+
+// Data class Usuario
+data class Usuario(val nombre: String, val apellido: String, val edad: Int)
+
