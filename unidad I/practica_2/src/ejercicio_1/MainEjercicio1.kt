@@ -22,5 +22,14 @@ class CuentaBancaria(private var saldo: Double, private var limiteRetiro: Double
         return limiteRetiro
     }
 
+    // Setter para establecer el límite de retiro con validación
+    fun setLimiteRetiro(nuevoLimite: Double) {
+        if (nuevoLimite > 0) {
+            limiteRetiro = nuevoLimite
+        } else {
+            println("Error: El límite de retiro debe ser mayor que 0.")
+        }
+    }
+
 
 }
