@@ -31,5 +31,15 @@ class CuentaBancaria(private var saldo: Double, private var limiteRetiro: Double
         }
     }
 
-
+    // Método para realizar un retiro considerando el límite de retiro
+    fun retirar(monto: Double) {
+        if (monto > saldo) {
+            println("Error: Saldo insuficiente.")
+        } else if (monto > limiteRetiro) {
+            println("Error: El monto excede el límite de retiro de $limiteRetiro.")
+        } else {
+            saldo -= monto
+            println("Retiro exitoso. Nuevo saldo: $saldo")
+        }
+    }
 }
