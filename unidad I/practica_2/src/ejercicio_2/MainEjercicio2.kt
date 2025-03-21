@@ -15,5 +15,11 @@ class Producto(private var precio: Double, private var descuento: Double) {
             println("Error: El precio no puede ser negativo.")
         }
     }
-    
+
+    // Getter para obtener el descuento
+    fun getDescuento(): Double {
+        return descuento
+    }
+
+
 }
