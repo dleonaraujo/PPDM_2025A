@@ -109,3 +109,44 @@ class Biblioteca : IBiblioteca {
     }
 }
 
+// Función principal para probar el sistema
+fun main() {
+    val biblioteca = Biblioteca()
+
+    // Crear materiales
+    val libro1 = Libro("El Principito", "Antoine de Saint-Exupéry", 1943, "Ficción", 96)
+    val libro2 = Libro("1984", "George Orwell", 1949, "Ciencia Ficción", 328)
+    val revista1 = Revista("National Geographic", "Varios", 2023, "1234-5678", 50, 3, "National Geographic Society")
+
+    // Registrar materiales
+    biblioteca.registrarMaterial(libro1)
+    biblioteca.registrarMaterial(libro2)
+    biblioteca.registrarMaterial(revista1)
+
+    // Registrar usuarios
+    val usuario1 = Usuario("Carlos", "Gómez", 25)
+    val usuario2 = Usuario("Ana", "Martínez", 30)
+    biblioteca.registrarUsuario(usuario1)
+    biblioteca.registrarUsuario(usuario2)
+
+    // Mostrar materiales disponibles antes del préstamo
+    biblioteca.mostrarMaterialesDisponibles()
+
+    // Préstamos
+    biblioteca.prestarMaterial(usuario1, libro1)
+    biblioteca.prestarMaterial(usuario2, revista1)
+
+    // Mostrar materiales disponibles después del préstamo
+    biblioteca.mostrarMaterialesDisponibles()
+
+    // Mostrar materiales reservados por usuarios
+    biblioteca.mostrarMaterialesReservadosPorUsuario(usuario1)
+    biblioteca.mostrarMaterialesReservadosPorUsuario(usuario2)
+
+    // Devolución
+    biblioteca.devolverMaterial(usuario1, libro1)
+
+    // Mostrar materiales nuevamente después de la devolución
+    biblioteca.mostrarMaterialesDisponibles()
+    biblioteca.mostrarMaterialesReservadosPorUsuario(usuario1)
+}
