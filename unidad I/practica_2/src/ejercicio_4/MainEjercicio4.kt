@@ -98,5 +98,14 @@ class Biblioteca : IBiblioteca {
         }
     }
 
+    override fun mostrarMaterialesReservadosPorUsuario(usuario: Usuario) {
+        println("\nMateriales reservados por ${usuario.nombre} ${usuario.apellido}:")
+        val materialesUsuario = usuarios[usuario]
+        if (materialesUsuario.isNullOrEmpty()) {
+            println("No tiene materiales reservados.")
+        } else {
+            materialesUsuario.forEach { it.mostrarDetalles() }
+        }
+    }
 }
 
