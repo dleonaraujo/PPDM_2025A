@@ -43,3 +43,17 @@ class CuentaBancaria(private var saldo: Double, private var limiteRetiro: Double
         }
     }
 }
+
+fun main() {
+    val cuenta = CuentaBancaria(1000.0, 500.0) // Saldo inicial: 1000, Límite de retiro: 500
+
+    println("Saldo inicial: ${cuenta.getSaldo()}")
+
+    cuenta.retirar(600.0)  // Supera el límite de retiro
+    cuenta.retirar(400.0)  // Retiro exitoso
+    cuenta.setSaldo(1500.0)  // Modificar el saldo
+    println("Saldo actualizado: ${cuenta.getSaldo()}")
+
+    cuenta.setLimiteRetiro(700.0)  // Modificar el límite de retiro
+    cuenta.retirar(600.0)  // Ahora sí se puede retirar
+}
