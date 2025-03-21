@@ -21,3 +21,14 @@ class Cuadrado(private val lado: Double) : Shape() {
         return 4 * lado
     }
 }
+
+// Subclase Rectángulo
+class Rectangulo(private val base: Double, private val altura: Double) : Shape() {
+    override fun calcularArea(): Double {
+        return base * altura
+    }
+
+    override fun calcularPerimetro(): Double {
+        return 2 * (base + altura)
+    }
+}
