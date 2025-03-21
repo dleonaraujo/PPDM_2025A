@@ -50,3 +50,25 @@ interface IBiblioteca {
     fun mostrarMaterialesReservadosPorUsuario(usuario: Usuario)
 }
 
+// Clase Biblioteca
+class Biblioteca : IBiblioteca {
+    private val materialesDisponibles = mutableListOf<Material>()
+    private val usuarios = mutableMapOf<Usuario, MutableList<Material>>()
+
+    override fun registrarMaterial(material: Material) {
+        materialesDisponibles.add(material)
+        println("Material registrado: ${material.titulo}")
+    }
+
+    override fun registrarUsuario(usuario: Usuario) {
+        if (usuario !in usuarios) {
+            usuarios[usuario] = mutableListOf()
+            println("Usuario registrado: ${usuario.nombre} ${usuario.apellido}")
+        } else {
+            println("El usuario ya está registrado.")
+        }
+    }
+
+
+}
+
