@@ -30,4 +30,8 @@ class Producto(private var precio: Double, private var descuento: Double) {
         }
     }
 
+    // Metodo para calcular el precio final después de aplicar el descuento
+    fun calcularPrecioFinal(): Double {
+        return precio - (precio * (descuento / 100))
+    }
 }
