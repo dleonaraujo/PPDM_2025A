@@ -1,0 +1,94 @@
+# Directorios y archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+/build/
+.gradle/
+.idea/
+captures/
+.externalNativeBuild/
+
+# Archivos de configuración de usuario
+/local.properties
+*.iml
+
+# Archivos de dependencias
+/.cxx/
+/*.apk
+/*.aab
+/*.dex
+/.classpath
+/.project
+/.settings/
+/out/
+/bin/
+
+# Archivos generados por Gradle
+.gradle/
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Archivos de Log y otros generados
+*.log
+*.keystore
+*.jks
+*.suo
+*.class
+*.swp
+*.swo
+*.jar
+*.war
+*.ear
+
+# Configuración de Android Studio
+.idea/
+*.iws
+*.ipr
+*.iml
+
+# Archivos de caché de IntelliJ/Android Studio
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/modules.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Carpetas de configuración de VSCode (si lo usas)
+/.vscode/
+
+# Configuración de Firebase
+google-services.json
+app/google-services.json
+
+# Archivos generados por NDK
+*.o
+*.so
+*.obj
+
+# Archivos de personalización de entornos
+.env
+*.env.local
+*.env.development
+*.env.production
+
+# Archivos generados en pruebas
+/test-results/
+*/test-output/
+coverage/
+
+# Archivos de cache de Flutter (si usas Flutter en Android)
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+.packages
+
+# Archivos de configuración de Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+
+# Ignorar archivos específicos de MacOS y Linux
+*.orig
+*.swp
+*.swo
