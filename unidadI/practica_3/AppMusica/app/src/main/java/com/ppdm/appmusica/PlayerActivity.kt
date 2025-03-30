@@ -19,10 +19,17 @@ class PlayerActivity : AppCompatActivity() {
         val btnPause = findViewById<Button>(R.id.botonPausa)
         val btnStop = findViewById<Button>(R.id.botonParar)
 
+        // Obtener el nombre y el ID del recurso de la canción
         val selectedSong = intent.getStringExtra("song_name")
+        val songResId = intent.getIntExtra("song_res_id", 0) // ID del recurso
+
         songTitle.text = selectedSong
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.guns_sweet_child_o_mine) // Ajustar según la canción
+        if (songResId != 0) {
+            mediaPlayer = MediaPlayer.create(this, songResId) // Usar el ID recibido
+        } else {
+            finish() // Cerrar la actividad si no se recibió un ID válido
+        }
 
         btnPlay.setOnClickListener {
             if (!isPlaying) {
@@ -41,7 +48,7 @@ class PlayerActivity : AppCompatActivity() {
         btnStop.setOnClickListener {
             if (isPlaying) {
                 mediaPlayer.stop()
-                mediaPlayer.prepare()
+                mediaPlayer.prepare() // Repreparar para poder reproducir otra vez
                 isPlaying = false
             }
         }
@@ -52,3 +59,4 @@ class PlayerActivity : AppCompatActivity() {
         mediaPlayer.release()
     }
 }
+
