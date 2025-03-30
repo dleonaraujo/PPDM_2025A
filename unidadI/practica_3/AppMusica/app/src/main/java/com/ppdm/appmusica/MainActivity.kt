@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
 
     private val canciones = listOf(
         "Guns N' Roses - Sweet Child O' Mine",
-        "Queen - Bohemian Rhapsody",
-        "AC/DC - Back in Black"
+        "Queen - Cool Cat",
+        "Guns N' Roses - November Rain"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        
+        recyclerView.adapter = SongAdapter(canciones) { selectedSong ->
+            val intent = Intent(this, PlayerActivity::class.java)
+            intent.putExtra("song_name", selectedSong)
+            startActivity(intent)
+        }
     }
 }
