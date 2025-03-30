@@ -7,20 +7,20 @@
     android:padding="20dp">
 
     <Button
-        android:id="@+id/btnPlay"
+        android:id="@+id/botonReproducir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reproducir" />
 
     <Button
-        android:id="@+id/btnPause"
+        android:id="@+id/botonPausa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pausar"
         android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/btnStop"
+        android:id="@+id/botonParar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detener"

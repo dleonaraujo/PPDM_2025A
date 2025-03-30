@@ -1,20 +1,21 @@
 package com.ppdm.appmusica
 
+import android.media.MediaPlayer
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.ppdm.appmusica.ui.theme.AppMusicaTheme
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    private lateinit var mediaPlayer: MediaPlayer
+    private var isPlaying = false  // Controla si el audio está en reproducción
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val botonReproducir = findViewById<Button>(R.id.botonReproducir)
+        val botonPausa = findViewById<Button>(R.id.botonPausa)
+        val botonParar = findViewById<Button>(R.id.botonParar)
+
     }
 }
