@@ -17,5 +17,6 @@ class MainActivity : AppCompatActivity() {
         val botonPausa = findViewById<Button>(R.id.botonPausa)
         val botonParar = findViewById<Button>(R.id.botonParar)
 
+        mediaPlayer = MediaPlayer.create(this, R.raw.guns_sweet_child_o_mine)
     }
 }
