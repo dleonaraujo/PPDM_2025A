@@ -15,8 +15,8 @@ class MainActivity : ComponentActivity() {
 
         val images = listOf(
             ImageItem(R.drawable.imagen_torre_eiffel, "Torre Eiffel", "Monumento icónico en París."),
-            ImageItem(R.drawable.imagen_coliseo, "Coliseo Romano", "Anfiteatro de la Antigua Roma."),
-            ImageItem(R.drawable.imagen_machu_picchu, "Machu Picchu", "Ciudadela inca en los Andes."),
+            ImageItem(R.drawable.imagen_torre_inclinada, "Torre Inclinada de Pisa", "La torre campanario de la catedral de Pisa."),
+            ImageItem(R.drawable.imagen_estatua_libertad, "Estatua de la Libertad", "El monumento nacional de la Estatua de la Libertad."),
         )
 
         recyclerView.adapter = ImageAdapter(this, images)
