@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">app_edicion_perfil</string>
+    <string name="resumen_activity_label">Resumen</string>
+
 </resources>
