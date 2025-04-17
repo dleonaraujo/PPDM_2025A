@@ -17,7 +17,11 @@ class MainActivity : Activity() {
         notaEditText = findViewById(R.id.notaEditText)
         val btnCompartir = findViewById<Button>(R.id.btnCompartir)
 
-
+        btnCompartir.setOnClickListener {
+            val intent = Intent(this, OpcionesActivity::class.java)
+            intent.putExtra("nota", notaEditText.text.toString())
+            startActivityForResult(intent, REQUEST_CODE)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
