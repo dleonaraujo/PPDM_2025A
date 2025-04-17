@@ -1,11 +1,10 @@
-package com.ppdm.editornotasapp
+package com.ppdm.app_editor_notas
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import com.ppdm.app_editor_notas.R
 
 class MainActivity : Activity() {
     private lateinit var notaEditText: EditText
@@ -17,6 +16,7 @@ class MainActivity : Activity() {
 
         notaEditText = findViewById(R.id.notaEditText)
         val btnCompartir = findViewById<Button>(R.id.btnCompartir)
+
 
     }
 
