@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_editor_notas"
         tools:targetApi="31">
+        <activity android:name=".OpcionesActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
