@@ -51,6 +51,7 @@ Aplicación que permite al usuario armar un pedido de comida paso a paso a trav�
 
 ## Estructura del Proyecto
 
+```plaintext
 PPDM_2025/
 ├── app_pedidos/
 │   ├── src/main/java/com/ppdm/app_pedidos/
@@ -70,7 +71,7 @@ PPDM_2025/
 │
 ├── RubricaPractica5.docx
 └── README.md
-
+```
 
 
 
