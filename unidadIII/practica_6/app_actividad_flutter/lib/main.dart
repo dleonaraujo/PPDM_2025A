@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mi App Personal',
-      home: PantallaInicio(), // Cambia por PantallaPerfil() o PantallaHobbies()
+      title: 'Mi App Personal :D',
+      home: PantallaPerfil(), // Cambiar para ver las demas pantallas
     );
   }
 }

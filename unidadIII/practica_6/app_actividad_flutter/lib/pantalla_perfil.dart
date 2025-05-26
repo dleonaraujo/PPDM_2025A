@@ -13,11 +13,11 @@ class PantallaPerfil extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 60,
-              backgroundImage: NetworkImage("https://i.pravatar.cc/300"),
+              backgroundImage: NetworkImage("https://enciclopedia.net/wp-content/uploads/2014/04/persona.jpg"),
             ),
             const SizedBox(height: 20),
             const Text(
-              "Juan Pérez",
+              "Diego Leon",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const Text("Estudiante de Ingeniería de Software"),
@@ -27,7 +27,7 @@ class PantallaPerfil extends StatelessWidget {
               children: const [
                 Icon(Icons.email),
                 SizedBox(width: 10),
-                Text("juan.perez@email.com"),
+                Text("dloena@ulasalle.edu.pe"),
               ],
             ),
           ],
