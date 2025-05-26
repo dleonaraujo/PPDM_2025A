@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mi App Personal :D',
-      home: PantallaPerfil(), // Cambiar para ver las demas pantallas
+      home: PantallaHobbies(), // Cambiar para ver las demas pantallas
     );
   }
 }

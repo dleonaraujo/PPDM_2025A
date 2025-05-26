@@ -12,7 +12,7 @@ class PantallaInicio extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              "¡Hola! Bienvenido a mi aplicación personal.",
+              "¡Hola! Bienvenido a mi aplicación :D",
               style: TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 20),

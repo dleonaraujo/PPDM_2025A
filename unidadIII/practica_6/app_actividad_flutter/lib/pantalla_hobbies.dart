@@ -11,11 +11,11 @@ class PantallaHobbies extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            hobbyItem(Icons.book, "Leer novelas y ciencia ficción"),
+            hobbyItem(Icons.book, "Me dedico a estudiar"),
             const SizedBox(height: 10),
-            hobbyItem(Icons.music_note, "Escuchar música lo-fi"),
+            hobbyItem(Icons.music_note, "Escuchar música pop"),
             const SizedBox(height: 10),
-            hobbyItem(Icons.sports_esports, "Jugar videojuegos retro"),
+            hobbyItem(Icons.sports_esports, "Discutir sobre peliculas o series"),
           ],
         ),
       ),
